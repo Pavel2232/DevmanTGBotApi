@@ -1,6 +1,8 @@
 # Бот отправления уведомления о проверке работ для Devman Api
 
-$ git clone https://github.com/Pavel2232/DevmanTGBotApi
+```
+git clone https://github.com/Pavel2232/DevmanTGBotApi
+```
 
 Выполните poetry init
 
