@@ -4,7 +4,7 @@
 git clone https://github.com/Pavel2232/DevmanTGBotApi
 ```
 
-Выполните poetry init
+Выполните ```poetry init```
 
 Создайте файл .env и заполните следующие значения
 * DEWMAN_KEY= девман апи ключ 
