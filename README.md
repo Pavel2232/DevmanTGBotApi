@@ -1,6 +1,6 @@
 # Бот отправления уведомления о проверке работ для Devman Api
 Telegram bot для уведомлений о результатах  проверки домашней работы  от Devman 
-![alt text](https://photos.app.goo.gl/1ZTH6ENH96xyA9EH7)
+![alt text](https://disk.yandex.ru/i/6DAyCUXVk_9hpw)
 ### Как запустить проект.
 1. ``` git clone https://github.com/Pavel2232/DevmanTGBotApi```
 
