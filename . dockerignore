@@ -1,0 +1,10 @@
+# ignore all
+
+**
+
+#except
+!poetry.lock 
+
+!pyproject.toml
+!main.py
+!Dataclassapi.py
