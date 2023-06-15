@@ -40,6 +40,6 @@ if __name__ == '__main__':
     env.read_env('.env')
     bot = Bot(env('TG_BOT_KEY'))
 
-    headers = {'Authorization': 'Token {}'.format(env('DEWMAN_API_KEY'))}
+    headers = {'Authorization': 'Token {}'.format(env('DEVMAN_API_KEY'))}
     link = 'https://dvmn.org/api/long_polling/'
     main()
