@@ -12,8 +12,8 @@ Telegram bot для уведомлений о результатах  прове
 * TG_CHAT_ID= ваш чат айди(Чтобы получить свой chat_id, напишите в Telegram специальному боту: @userinfobot)
 
 4. Для запуска через docker выполните команды:
-- ```docker build . ```
-- ```docker run ```
+- ```docker build -t my_image_tag . ```
+- ```docker run — env_file .env my_image_tag  ```
 
 
 5. Для запуска программы  без использования docker:
