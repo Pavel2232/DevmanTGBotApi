@@ -15,4 +15,5 @@ Telegram bot для уведомлений о результатах  прове
 - ```docker run ```
 
 
-5. ```python main.py```
+5. Для запуска программы  без использования docker:
+```python main.py```
