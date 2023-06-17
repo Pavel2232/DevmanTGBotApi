@@ -12,7 +12,9 @@ class Attempts(BaseModel):
 
 
 class Response(BaseModel):
-    new_attempts: list[Attempts]
+    new_attempts: list[Attempts] | None = None
+    status: str
+    timestamp_to_request: float | None = None
 
     class Config:
         allow_population_by_field_name = True
