@@ -10,10 +10,11 @@ from environs import Env
 
 from Dataclassapi import Response
 
-logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__file__)
 
 
 def main():
+    logging.info('Бот запущен')
     env = Env()
     env.read_env('.env')
     bot = Bot(env('TG_BOT_KEY'))
@@ -46,5 +47,5 @@ def main():
 
 
 if __name__ == '__main__':
-    logging.info('Бот запущен')
+    logging.basicConfig(level=logging.INFO)
     main()
