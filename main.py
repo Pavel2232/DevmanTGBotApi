@@ -14,6 +14,7 @@ logger = logging.getLogger(__file__)
 
 
 def main():
+    logging.basicConfig(level=logging.INFO)
     logging.info('Бот запущен')
     env = Env()
     env.read_env('.env')
