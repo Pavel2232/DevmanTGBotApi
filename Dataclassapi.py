@@ -8,7 +8,7 @@ class Attempts(BaseModel):
     submitted_at: str
 
     class Config:
-        allow_population_by_field_name = True
+        populate_by_name = True
 
 
 class Response(BaseModel):
@@ -17,4 +17,4 @@ class Response(BaseModel):
     timestamp_to_request: float | None = None
 
     class Config:
-        allow_population_by_field_name = True
+        populate_by_name = True
