@@ -9,20 +9,22 @@ from telegram import Bot
 from environs import Env
 
 from Dataclassapi import Response
+from bot_logger import TelegramLogger
 
-logger = logging.getLogger(__file__)
+logger = logging.getLogger('tg_bot')
 
 
 def main():
-    logging.basicConfig(level=logging.INFO)
-    logging.info('Бот запущен')
+    logging.basicConfig(level=logging.INFO, format="%(process)d %(levelname)s %(message)s")
     env = Env()
     env.read_env('.env')
     bot = Bot(env('TG_BOT_KEY'))
-
+    logger.addHandler(TelegramLogger(bot, env('TG_CHAT_ID')))
     headers = {'Authorization': 'Token {}'.format(env('DEWMAN_API_KEY'))}
     link = 'https://dvmn.org/api/long_polling/'
+    logger.info('Бот запущен')
     while True:
+
         try:
             playload = {}
             response = requests.get(link, headers=headers, params=playload)
@@ -33,6 +35,9 @@ def main():
             continue
         except requests.exceptions.ReadTimeout:
             continue
+        except Exception as e:
+            logger.exception(e)
+
         if results.status == 'timeout':
             playload['timestamp'] = results.timestamp_to_request
         else:
